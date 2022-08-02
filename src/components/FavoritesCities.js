@@ -55,14 +55,12 @@ const columns = [
 function FavoritesCities({ cities }) {
   const [weather, setWeather] = useState([]);
   const didMountRef = useRef(false);
-  console.log("cities ===> ", cities);
   useEffect(() => {
     if (didMountRef.current) {
       !cities.length ? setWeather([]) : collectCitiesRows(cities, setWeather);
     }
     didMountRef.current = true;
   }, [cities]);
-  console.log("weather ===> ", weather);
 
   return (
     <Box sx={{ height: 350, width: "100%" }}>
