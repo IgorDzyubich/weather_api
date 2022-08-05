@@ -2,7 +2,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
-import SvgIcon from "@mui/material/SvgIcon";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
@@ -10,7 +9,6 @@ import useLocalStorage from "../src/hooks/useLocalStorage";
 import FavoritesCities from "./components/FavoritesCities";
 import InputsGroup from "./components/InputsGroup";
 import Snackbar from "./components/Snackbar";
-import { ReactComponent as Logo } from "./static/logo.svg";
 
 function App() {
   const [cities, setCities] = useLocalStorage("cities", []);
@@ -43,9 +41,6 @@ function App() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <SvgIcon viewBox="0 0 150 50" style={{ width: 200, height: 60 }}>
-            <Logo />
-          </SvgIcon>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Weather API
           </Typography>
